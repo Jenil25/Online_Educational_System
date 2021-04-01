@@ -17,8 +17,8 @@
                     <h5 class="card-title"> <b>{{ $course[0]->name }}</b> </h5>
                     <p class="card-text m-0 p-0"> {{ $course[0]->desc }} </p> 
                     <p class="price"> Original Price: ₹ {{ $course[0]->price }}</p>
-                    <p class="price"> Discount: {{ $course[0]->discount }} %</p>
-                    <p class="price"> Final Price: ₹ {{ $finalprice }}</p>
+                    <p> Discount: {{ $course[0]->discount }} %</p>
+                    <p> Final Price: ₹ {{ $finalprice }}</p>
                     <b>Select Payment Mode:</b>
                     <form action="{{ route('payment',['id'=>$course[0]->id]) }}" method="POST">
                         @csrf
